@@ -1,0 +1,1973 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Nadeem Siddiqui Real Estate — Karachi's most trusted property consultants in Scheme 33 & Gulzar-e-Hijri. Buy, sell, and invest in plots, bungalows, apartments, and commercial properties.">
+<meta name="keywords" content="real estate Karachi, property Scheme 33, plots Gulzar-e-Hijri, buy property Karachi, real estate agent Karachi">
+<title>Nadeem Siddiqui Real Estate | Karachi's Trusted Property Consultants</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #C9A84C;
+    --gold-light: #E8C97A;
+    --gold-dark: #8B6914;
+    --obsidian: #0A0A0A;
+    --charcoal: #111111;
+    --surface: #161616;
+    --surface2: #1E1E1E;
+    --text-primary: #F0EDE8;
+    --text-secondary: #A09880;
+    --text-muted: #5A5448;
+    --border: rgba(201,168,76,0.15);
+    --border-hover: rgba(201,168,76,0.4);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--obsidian);
+    color: var(--text-primary);
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    line-height: 1.7;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* CUSTOM CURSOR */
+  .cursor {
+    position: fixed;
+    width: 8px; height: 8px;
+    background: var(--gold);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease;
+    transform: translate(-50%, -50%);
+  }
+  .cursor-ring {
+    position: fixed;
+    width: 32px; height: 32px;
+    border: 1px solid rgba(201,168,76,0.5);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+  }
+  body:hover .cursor { opacity: 1; }
+
+  /* SCROLLBAR */
+  ::-webkit-scrollbar { width: 4px; }
+  ::-webkit-scrollbar-track { background: var(--obsidian); }
+  ::-webkit-scrollbar-thumb { background: var(--gold-dark); border-radius: 2px; }
+
+  /* TYPOGRAPHY */
+  .display { font-family: 'Cormorant Garamond', serif; }
+
+  h1, h2, h3, h4 { font-family: 'Cormorant Garamond', serif; font-weight: 300; line-height: 1.15; }
+
+  .gold { color: var(--gold); }
+  .gold-gradient {
+    background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* REVEAL ANIMATIONS */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1), transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+  .reveal-delay-5 { transition-delay: 0.5s; }
+
+  /* GOLD DIVIDER */
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .divider-line {
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold));
+  }
+  .divider-text {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* BUTTONS */
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    transition: all 0.35s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255,255,255,0.05);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+  }
+  .btn:hover::before { transform: translateX(0); }
+
+  .btn-gold {
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    color: var(--obsidian);
+  }
+  .btn-gold:hover { box-shadow: 0 8px 40px rgba(201,168,76,0.35); transform: translateY(-2px); }
+
+  .btn-outline {
+    background: transparent;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+  }
+  .btn-outline:hover { background: rgba(201,168,76,0.08); transform: translateY(-2px); }
+
+  /* ========== NAVIGATION ========== */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    padding: 0 60px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.4s ease;
+  }
+  nav.scrolled {
+    background: rgba(10,10,10,0.95);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    height: 68px;
+  }
+  .nav-logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+  }
+  .nav-logo-main {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--text-primary);
+    letter-spacing: 0.05em;
+    line-height: 1.1;
+  }
+  .nav-logo-main span { color: var(--gold); }
+  .nav-logo-sub {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+  }
+  .nav-links a {
+    font-size: 0.72rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px; left: 0;
+    width: 0; height: 1px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-links a:hover::after { width: 100%; }
+  .nav-cta {
+    padding: 10px 24px;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  .nav-cta:hover { background: var(--gold); color: var(--obsidian); }
+
+  /* HAMBURGER */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+  }
+  .hamburger span {
+    display: block;
+    width: 24px; height: 1px;
+    background: var(--gold);
+    transition: all 0.3s;
+  }
+
+  /* MOBILE MENU */
+  .mobile-menu {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: var(--obsidian);
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  .mobile-menu a:hover { color: var(--gold); }
+  .mobile-close {
+    position: absolute;
+    top: 28px; right: 28px;
+    font-size: 2rem;
+    color: var(--gold);
+    cursor: pointer;
+    background: none;
+    border: none;
+  }
+
+  /* ========== HERO ========== */
+  #hero {
+    position: relative;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 80% at 60% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
+      linear-gradient(135deg, #0A0A0A 0%, #111111 50%, #0D0B08 100%);
+  }
+  .hero-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(201,168,76,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(201,168,76,0.04) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: radial-gradient(ellipse 70% 70% at 50% 50%, black 30%, transparent 100%);
+  }
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 60px;
+    padding-top: 80px;
+  }
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 1s 0.3s forwards;
+  }
+  .hero-eyebrow-line {
+    width: 50px; height: 1px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+  }
+  .hero-eyebrow-text {
+    font-size: 0.65rem;
+    letter-spacing: 0.35em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .hero-headline {
+    font-size: clamp(3rem, 7vw, 6rem);
+    font-weight: 300;
+    line-height: 1.05;
+    max-width: 780px;
+    opacity: 0;
+    animation: fadeUp 1.1s 0.5s forwards;
+  }
+  .hero-headline em {
+    font-style: italic;
+    color: var(--gold);
+  }
+  .hero-sub {
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    max-width: 520px;
+    margin-top: 24px;
+    font-weight: 300;
+    line-height: 1.8;
+    opacity: 0;
+    animation: fadeUp 1.1s 0.7s forwards;
+  }
+  .hero-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 48px;
+    flex-wrap: wrap;
+    opacity: 0;
+    animation: fadeUp 1.1s 0.9s forwards;
+  }
+  .hero-stats {
+    display: flex;
+    gap: 60px;
+    margin-top: 80px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border);
+    opacity: 0;
+    animation: fadeUp 1.1s 1.1s forwards;
+  }
+  .hero-stat-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 300;
+    color: var(--gold);
+    line-height: 1;
+  }
+  .hero-stat-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-top: 6px;
+  }
+  .hero-scroll-indicator {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0;
+    animation: fadeIn 1s 1.5s forwards;
+  }
+  .hero-scroll-line {
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(180deg, var(--gold), transparent);
+    animation: scrollLine 2s infinite;
+  }
+  .hero-scroll-text {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  @keyframes scrollLine {
+    0% { transform: scaleY(0); transform-origin: top; }
+    50% { transform: scaleY(1); transform-origin: top; }
+    51% { transform: scaleY(1); transform-origin: bottom; }
+    100% { transform: scaleY(0); transform-origin: bottom; }
+  }
+
+  /* ========== ABOUT ========== */
+  #about {
+    padding: 140px 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px;
+    align-items: center;
+  }
+  .about-visual {
+    position: relative;
+  }
+  .about-img-frame {
+    width: 100%;
+    aspect-ratio: 3/4;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+  }
+  .about-img-inner {
+    position: absolute;
+    inset: 16px;
+    background: 
+      linear-gradient(135deg, var(--surface2) 0%, var(--charcoal) 100%),
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 40px,
+        rgba(201,168,76,0.02) 40px,
+        rgba(201,168,76,0.02) 41px
+      );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .about-img-icon {
+    font-size: 3rem;
+    opacity: 0.3;
+  }
+  .about-img-text {
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+  }
+  .about-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    width: 140px; height: 140px;
+    background: linear-gradient(135deg, var(--gold), var(--gold-dark));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 4px solid var(--obsidian);
+  }
+  .about-badge-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    color: var(--obsidian);
+    font-weight: 400;
+    line-height: 1;
+  }
+  .about-badge-text {
+    font-size: 0.6rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: rgba(0,0,0,0.7);
+    text-align: center;
+    line-height: 1.4;
+  }
+  .about-heading {
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    margin-bottom: 24px;
+  }
+  .about-body {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.9;
+    margin-bottom: 20px;
+  }
+  .about-pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-top: 40px;
+  }
+  .about-pillar {
+    padding: 20px;
+    border: 1px solid var(--border);
+    background: var(--surface);
+    transition: border-color 0.3s, background 0.3s;
+  }
+  .about-pillar:hover { border-color: var(--border-hover); background: var(--surface2); }
+  .about-pillar-icon { font-size: 1.4rem; margin-bottom: 8px; }
+  .about-pillar-title {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .about-pillar-text {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ========== SERVICES ========== */
+  #services {
+    padding: 140px 60px;
+    background: var(--surface);
+    position: relative;
+  }
+  .services-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 60% 60% at 50% 100%, rgba(201,168,76,0.04) 0%, transparent 70%);
+  }
+  .section-inner {
+    max-width: 1300px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .section-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: end;
+    margin-bottom: 80px;
+  }
+  .section-heading { font-size: clamp(2rem, 3.5vw, 3rem); }
+  .section-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.8;
+  }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+  .service-card {
+    background: var(--charcoal);
+    padding: 48px 36px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.4s;
+    cursor: default;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 100%; height: 2px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+  }
+  .service-card:hover { background: var(--surface2); }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4rem;
+    color: rgba(201,168,76,0.08);
+    font-weight: 300;
+    line-height: 1;
+    position: absolute;
+    top: 28px; right: 28px;
+    transition: color 0.4s;
+  }
+  .service-card:hover .service-num { color: rgba(201,168,76,0.15); }
+  .service-icon {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    display: block;
+  }
+  .service-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 14px;
+    color: var(--text-primary);
+  }
+  .service-desc {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.8;
+  }
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 24px;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold);
+    text-decoration: none;
+    transition: gap 0.3s;
+  }
+  .service-card:hover .service-link { gap: 14px; }
+
+  /* ========== PROPERTIES ========== */
+  #properties {
+    padding: 140px 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .properties-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .prop-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: border-color 0.4s, transform 0.4s, box-shadow 0.4s;
+    position: relative;
+  }
+  .prop-card:hover {
+    border-color: var(--border-hover);
+    transform: translateY(-6px);
+    box-shadow: 0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,168,76,0.1);
+  }
+  .prop-image {
+    aspect-ratio: 4/3;
+    background: var(--surface2);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .prop-image-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(circle at 30% 70%, rgba(201,168,76,0.08), transparent 60%),
+      linear-gradient(135deg, var(--charcoal), var(--surface2));
+  }
+  .prop-image-icon {
+    font-size: 2.5rem;
+    opacity: 0.25;
+    position: relative;
+    z-index: 1;
+  }
+  .prop-image-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.25em;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+  }
+  .prop-badge {
+    position: absolute;
+    top: 16px; left: 16px;
+    padding: 5px 12px;
+    font-size: 0.62rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    font-weight: 500;
+    z-index: 2;
+  }
+  .badge-sale { background: var(--gold); color: var(--obsidian); }
+  .badge-hot { background: rgba(200,50,50,0.85); color: #fff; }
+  .badge-new { background: rgba(40,120,80,0.85); color: #fff; }
+  .prop-body { padding: 28px; }
+  .prop-type {
+    font-size: 0.62rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 8px;
+  }
+  .prop-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .prop-location {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .prop-features {
+    display: flex;
+    gap: 20px;
+    padding: 16px 0;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 20px;
+  }
+  .prop-feat {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  .prop-price {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.6rem;
+    color: var(--gold);
+    font-weight: 300;
+  }
+  .prop-price-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ========== WHY CHOOSE US ========== */
+  #why {
+    padding: 140px 60px;
+    background: var(--charcoal);
+    position: relative;
+    overflow: hidden;
+  }
+  .why-bg {
+    position: absolute;
+    top: -200px; right: -200px;
+    width: 600px; height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(201,168,76,0.04) 0%, transparent 70%);
+  }
+  .why-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .why-heading { font-size: clamp(2.2rem, 4vw, 3.5rem); margin-bottom: 24px; }
+  .why-intro { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.9; }
+  .why-features {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  .why-item {
+    display: flex;
+    gap: 20px;
+    padding: 24px;
+    border: 1px solid transparent;
+    transition: all 0.4s;
+    background: var(--surface);
+  }
+  .why-item:hover {
+    border-color: var(--border);
+    background: var(--surface2);
+    transform: translateX(6px);
+  }
+  .why-icon {
+    width: 44px; height: 44px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+    transition: background 0.3s;
+  }
+  .why-item:hover .why-icon { background: rgba(201,168,76,0.1); border-color: var(--gold); }
+  .why-item-title {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  .why-item-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+  }
+
+  /* ========== TESTIMONIALS ========== */
+  #testimonials {
+    padding: 140px 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-top: 20px;
+  }
+  .testi-card {
+    padding: 48px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    position: relative;
+    transition: border-color 0.4s;
+  }
+  .testi-card:hover { border-color: var(--border-hover); }
+  .testi-card.featured {
+    grid-column: span 2;
+    background: var(--surface2);
+  }
+  .testi-quote {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    color: var(--gold);
+    opacity: 0.3;
+    line-height: 0.5;
+    margin-bottom: 24px;
+  }
+  .testi-text {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--text-secondary);
+    line-height: 1.8;
+    margin-bottom: 32px;
+  }
+  .testi-card.featured .testi-text {
+    font-size: 1.55rem;
+    color: var(--text-primary);
+  }
+  .testi-author {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  .testi-avatar {
+    width: 48px; height: 48px;
+    background: linear-gradient(135deg, var(--gold-dark), var(--gold));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--obsidian);
+    font-weight: 400;
+    flex-shrink: 0;
+  }
+  .testi-name {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    letter-spacing: 0.05em;
+  }
+  .testi-detail {
+    font-size: 0.72rem;
+    color: var(--gold);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+  .testi-stars {
+    margin-left: auto;
+    color: var(--gold);
+    font-size: 0.85rem;
+    letter-spacing: 3px;
+  }
+
+  /* ========== CTA BAND ========== */
+  #cta-band {
+    padding: 120px 60px;
+    background: linear-gradient(135deg, var(--surface2) 0%, var(--charcoal) 100%);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+  }
+  .cta-band-bg {
+    position: absolute;
+    inset: 0;
+    background: 
+      radial-gradient(ellipse 80% 120% at 50% 0%, rgba(201,168,76,0.06) 0%, transparent 60%),
+      repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 60px,
+        rgba(201,168,76,0.015) 60px,
+        rgba(201,168,76,0.015) 61px
+      );
+  }
+  .cta-band-inner { position: relative; max-width: 700px; margin: 0 auto; }
+  .cta-eyebrow {
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 20px;
+  }
+  .cta-heading {
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    margin-bottom: 20px;
+  }
+  .cta-sub {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.8;
+    margin-bottom: 48px;
+  }
+  .cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* ========== CONTACT ========== */
+  #contact {
+    padding: 140px 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    margin-top: 60px;
+  }
+  .contact-info { display: flex; flex-direction: column; gap: 32px; }
+  .contact-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  .contact-item-icon {
+    width: 44px; height: 44px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+  }
+  .contact-item-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .contact-item-value {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .form-group { display: flex; flex-direction: column; gap: 8px; }
+  .form-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .form-input, .form-textarea, .form-select {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text-primary);
+    padding: 14px 18px;
+    font-family: 'Jost', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 300;
+    outline: none;
+    transition: border-color 0.3s;
+    width: 100%;
+  }
+  .form-input:focus, .form-textarea:focus, .form-select:focus {
+    border-color: var(--gold);
+  }
+  .form-input::placeholder, .form-textarea::placeholder { color: var(--text-muted); }
+  .form-textarea { resize: vertical; min-height: 120px; }
+  .form-select option { background: var(--surface2); }
+  .map-placeholder {
+    margin-top: 24px;
+    height: 200px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .map-icon { font-size: 2rem; opacity: 0.4; }
+  .map-text {
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+
+  /* ========== FOOTER ========== */
+  footer {
+    background: var(--obsidian);
+    border-top: 1px solid var(--border);
+  }
+  .footer-main {
+    padding: 80px 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 60px;
+  }
+  .footer-brand { }
+  .footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+  .footer-logo span { color: var(--gold); }
+  .footer-logo-sub {
+    font-size: 0.6rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+  }
+  .footer-tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+  .footer-social {
+    display: flex;
+    gap: 12px;
+  }
+  .social-icon {
+    width: 36px; height: 36px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: all 0.3s;
+  }
+  .social-icon:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(201,168,76,0.05);
+  }
+  .footer-col-title {
+    font-size: 0.65rem;
+    font-weight: 500;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 24px;
+  }
+  .footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .footer-links a {
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    text-decoration: none;
+    transition: color 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .footer-links a::before {
+    content: '—';
+    color: var(--gold);
+    font-size: 0.6rem;
+  }
+  .footer-links a:hover { color: var(--text-primary); }
+  .footer-bottom {
+    padding: 24px 60px;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--border);
+  }
+  .footer-copy {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+  }
+  .footer-rera {
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+  }
+
+  /* ========== FLOATING WHATSAPP ========== */
+  .wa-float {
+    position: fixed;
+    bottom: 32px;
+    right: 32px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+  }
+  .wa-btn {
+    width: 56px; height: 56px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 8px 30px rgba(37,211,102,0.35);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    font-size: 1.5rem;
+    animation: pulse-wa 3s infinite;
+  }
+  .wa-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 40px rgba(37,211,102,0.5);
+  }
+  .wa-label {
+    background: var(--surface2);
+    border: 1px solid var(--border);
+    padding: 8px 16px;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateX(10px);
+    transition: all 0.3s;
+    pointer-events: none;
+  }
+  .wa-float:hover .wa-label {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  @keyframes pulse-wa {
+    0%, 100% { box-shadow: 0 8px 30px rgba(37,211,102,0.35); }
+    50% { box-shadow: 0 8px 50px rgba(37,211,102,0.6); }
+  }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 1024px) {
+    nav { padding: 0 30px; }
+    .nav-links { display: none; }
+    .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    .hero-content { padding: 0 30px; padding-top: 80px; }
+    .hero-stats { gap: 30px; }
+    #about { padding: 100px 30px; }
+    .about-grid { grid-template-columns: 1fr; gap: 60px; }
+    .about-visual { display: none; }
+    #services { padding: 100px 30px; }
+    .section-header { grid-template-columns: 1fr; gap: 20px; }
+    .services-grid { grid-template-columns: 1fr 1fr; }
+    #properties { padding: 100px 30px; }
+    .properties-grid { grid-template-columns: 1fr 1fr; }
+    #why { padding: 100px 30px; }
+    .why-grid { grid-template-columns: 1fr; gap: 60px; }
+    #testimonials { padding: 100px 30px; }
+    .testimonials-grid { grid-template-columns: 1fr; }
+    .testi-card.featured { grid-column: span 1; }
+    #cta-band { padding: 80px 30px; }
+    #contact { padding: 100px 30px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 60px; }
+    .footer-main { grid-template-columns: 1fr 1fr; gap: 40px; padding: 60px 30px; }
+    .footer-bottom { padding: 24px 30px; flex-direction: column; gap: 8px; text-align: center; }
+  }
+
+  @media (max-width: 640px) {
+    .hero-stats { flex-direction: column; gap: 24px; }
+    .services-grid { grid-template-columns: 1fr; }
+    .properties-grid { grid-template-columns: 1fr; }
+    .about-pillars { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    .footer-main { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="#about" onclick="closeMobile()">About</a>
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#properties" onclick="closeMobile()">Properties</a>
+  <a href="#why" onclick="closeMobile()">Why Us</a>
+  <a href="#contact" onclick="closeMobile()">Contact</a>
+</div>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <a href="#hero" class="nav-logo">
+    <span class="nav-logo-main">Nadeem <span>Siddiqui</span></span>
+    <span class="nav-logo-sub">Real Estate · Karachi</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#properties">Properties</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#testimonials">Reviews</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Consult Now</a>
+  <div class="hamburger" id="hamburger">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">
+      <div class="hero-eyebrow-line"></div>
+      <span class="hero-eyebrow-text">Scheme 33 · Gulzar-e-Hijri · Karachi</span>
+    </div>
+    <h1 class="hero-headline">
+      Find Your <em>Dream Property</em><br>in Karachi's Most<br>Trusted Hands
+    </h1>
+    <p class="hero-sub">
+      Over a decade of verified property deals across Scheme 33, Gulzar-e-Hijri, and beyond. We bring transparency, integrity, and deep local expertise to every transaction.
+    </p>
+    <div class="hero-actions">
+      <a href="#properties" class="btn btn-gold">
+        <span>View Properties</span>
+        <span>→</span>
+      </a>
+      <a href="#contact" class="btn btn-outline">Contact Agent</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">500+</div>
+        <div class="hero-stat-label">Properties Closed</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">12+</div>
+        <div class="hero-stat-label">Years in Karachi</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">98%</div>
+        <div class="hero-stat-label">Client Satisfaction</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">₨ 0</div>
+        <div class="hero-stat-label">Hidden Fees</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-indicator">
+    <div class="hero-scroll-line"></div>
+    <span class="hero-scroll-text">Scroll</span>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-grid">
+    <div class="about-visual reveal">
+      <div class="about-img-frame">
+        <div class="about-img-inner">
+          <div class="about-img-icon">🏛️</div>
+          <div class="about-img-text">Est. 2012 · Karachi</div>
+        </div>
+      </div>
+      <div class="about-badge">
+        <div class="about-badge-num">12+</div>
+        <div class="about-badge-text">Years of<br>Trust</div>
+      </div>
+    </div>
+    <div>
+      <div class="divider reveal">
+        <div class="divider-line"></div>
+        <span class="divider-text">Our Story</span>
+      </div>
+      <h2 class="about-heading reveal reveal-delay-1">
+        Built on Trust.<br>Guided by <em class="gold">Integrity.</em>
+      </h2>
+      <p class="about-body reveal reveal-delay-2">
+        Nadeem Siddiqui Real Estate was established with a single conviction: that every client deserves honest advice and a deal they can be proud of. Based in the heart of Scheme 33, Gulzar-e-Hijri, we have grown to become one of Karachi's most recognized names in residential and commercial property.
+      </p>
+      <p class="about-body reveal reveal-delay-3">
+        Our founder, Nadeem Siddiqui, spent years studying the nuances of Karachi's dynamic real estate market before building an agency rooted in transparency. Today, our team guides families, investors, and businesses through every step — from site visits and valuations to registration and documentation — ensuring nothing is left to chance.
+      </p>
+      <p class="about-body reveal reveal-delay-4">
+        Whether you are buying your first plot, relocating your family, or seeking high-yield commercial investment, we provide the guidance you deserve, delivered with the care this city's families have trusted for over a decade.
+      </p>
+      <div class="about-pillars reveal reveal-delay-5">
+        <div class="about-pillar">
+          <div class="about-pillar-icon">🔎</div>
+          <div class="about-pillar-title">Verified Listings</div>
+          <div class="about-pillar-text">Every property is checked for clear title and legal standing before we present it.</div>
+        </div>
+        <div class="about-pillar">
+          <div class="about-pillar-icon">🤝</div>
+          <div class="about-pillar-title">Honest Dealing</div>
+          <div class="about-pillar-text">No inflated prices, no hidden commissions — just straightforward guidance.</div>
+        </div>
+        <div class="about-pillar">
+          <div class="about-pillar-icon">📍</div>
+          <div class="about-pillar-title">Local Expertise</div>
+          <div class="about-pillar-text">Deep knowledge of Scheme 33, Gulzar-e-Hijri, and surrounding localities.</div>
+        </div>
+        <div class="about-pillar">
+          <div class="about-pillar-icon">💡</div>
+          <div class="about-pillar-title">Investment Insight</div>
+          <div class="about-pillar-text">Smart advice on when and where to invest for long-term returns in Karachi.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="services-bg"></div>
+  <div class="section-inner">
+    <div class="section-header">
+      <div>
+        <div class="divider reveal">
+          <div class="divider-line"></div>
+          <span class="divider-text">What We Offer</span>
+        </div>
+        <h2 class="section-heading reveal reveal-delay-1">
+          A Complete Suite of<br><em class="gold">Property Services</em>
+        </h2>
+      </div>
+      <p class="section-desc reveal reveal-delay-2">
+        From residential plots to premium commercial spaces, our expertise spans the full spectrum of Karachi's property market. Every service is delivered with precision and personal care.
+      </p>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal">
+        <span class="service-num">01</span>
+        <span class="service-icon">🏞️</span>
+        <div class="service-title">Plot Buying & Selling</div>
+        <p class="service-desc">Residential and commercial plots across Scheme 33, Gulzar-e-Hijri, and key locations throughout Karachi. We handle documentation, valuation, and registration end-to-end.</p>
+        <a href="#contact" class="service-link">Inquire Now <span>→</span></a>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <span class="service-num">02</span>
+        <span class="service-icon">🏡</span>
+        <div class="service-title">Luxury Homes & Bungalows</div>
+        <p class="service-desc">Premium bungalows and standalone houses built for Karachi's discerning families. We curate properties that match your lifestyle, budget, and long-term aspirations.</p>
+        <a href="#contact" class="service-link">Inquire Now <span>→</span></a>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <span class="service-num">03</span>
+        <span class="service-icon">🏢</span>
+        <div class="service-title">Flats & Apartments</div>
+        <p class="service-desc">From compact starter flats to spacious penthouse-style apartments — we help you find a home that fits your life. All listings are verified for clear possession status.</p>
+        <a href="#contact" class="service-link">Inquire Now <span>→</span></a>
+      </div>
+      <div class="service-card reveal reveal-delay-1">
+        <span class="service-num">04</span>
+        <span class="service-icon">🏪</span>
+        <div class="service-title">Commercial Shops</div>
+        <p class="service-desc">Strategically located commercial units for businesses, retail ventures, and investors. We identify high-footfall locations with strong rental yield potential across Karachi.</p>
+        <a href="#contact" class="service-link">Inquire Now <span>→</span></a>
+      </div>
+      <div class="service-card reveal reveal-delay-2">
+        <span class="service-num">05</span>
+        <span class="service-icon">📈</span>
+        <div class="service-title">Property Investment Consulting</div>
+        <p class="service-desc">Expert, data-informed investment guidance tailored to your goals. Whether you seek steady rental income or capital appreciation, we build a strategy that works for you.</p>
+        <a href="#contact" class="service-link">Inquire Now <span>→</span></a>
+      </div>
+      <div class="service-card reveal reveal-delay-3">
+        <span class="service-num">06</span>
+        <span class="service-icon">📋</span>
+        <div class="service-title">Documentation & Legal Guidance</div>
+        <p class="service-desc">Comprehensive support with property verification, NOC, transfer letters, and Karachi registration procedures — we ensure your deal is watertight from day one.</p>
+        <a href="#contact" class="service-link">Inquire Now <span>→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROPERTIES -->
+<section id="properties">
+  <div class="divider reveal">
+    <div class="divider-line"></div>
+    <span class="divider-text">Featured Listings</span>
+  </div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:60px;">
+    <h2 class="section-heading reveal reveal-delay-1">
+      Premium Properties<br>Handpicked for <em class="gold">You</em>
+    </h2>
+    <a href="#contact" class="btn btn-outline reveal reveal-delay-2" style="white-space:nowrap">View All Listings →</a>
+  </div>
+  <div class="properties-grid">
+
+    <!-- Property 1 -->
+    <div class="prop-card reveal">
+      <div class="prop-image">
+        <div class="prop-image-bg"></div>
+        <div class="prop-badge badge-hot">Hot Deal</div>
+        <div class="prop-image-icon">🏡</div>
+        <div class="prop-image-label">Bungalow</div>
+      </div>
+      <div class="prop-body">
+        <div class="prop-type">Bungalow · For Sale</div>
+        <div class="prop-title">240 Sq Yd Bungalow — Gulzar-e-Hijri</div>
+        <div class="prop-location">📍 Scheme 33, Gulzar-e-Hijri, Karachi</div>
+        <div class="prop-features">
+          <span class="prop-feat">🛏 5 Beds</span>
+          <span class="prop-feat">🚿 5 Baths</span>
+          <span class="prop-feat">📐 240 Sq Yd</span>
+        </div>
+        <div class="prop-price">PKR 3.20 Cr</div>
+        <div class="prop-price-label">Negotiable · Direct Owner</div>
+      </div>
+    </div>
+
+    <!-- Property 2 -->
+    <div class="prop-card reveal reveal-delay-1">
+      <div class="prop-image">
+        <div class="prop-image-bg"></div>
+        <div class="prop-badge badge-sale">For Sale</div>
+        <div class="prop-image-icon">🏞️</div>
+        <div class="prop-image-label">Residential Plot</div>
+      </div>
+      <div class="prop-body">
+        <div class="prop-type">Plot · Residential</div>
+        <div class="prop-title">120 Sq Yd Residential Plot</div>
+        <div class="prop-location">📍 Sector 33-A, Scheme 33, Karachi</div>
+        <div class="prop-features">
+          <span class="prop-feat">📐 120 Sq Yd</span>
+          <span class="prop-feat">📄 Clear Title</span>
+          <span class="prop-feat">⚡ All Utilities</span>
+        </div>
+        <div class="prop-price">PKR 85 Lakh</div>
+        <div class="prop-price-label">Ready for Construction</div>
+      </div>
+    </div>
+
+    <!-- Property 3 -->
+    <div class="prop-card reveal reveal-delay-2">
+      <div class="prop-image">
+        <div class="prop-image-bg"></div>
+        <div class="prop-badge badge-new">New</div>
+        <div class="prop-image-icon">🏢</div>
+        <div class="prop-image-label">Apartment</div>
+      </div>
+      <div class="prop-body">
+        <div class="prop-type">Apartment · For Sale</div>
+        <div class="prop-title">3-Bed Luxury Flat — Gulzar-e-Hijri</div>
+        <div class="prop-location">📍 Block 7, Gulzar-e-Hijri, Karachi</div>
+        <div class="prop-features">
+          <span class="prop-feat">🛏 3 Beds</span>
+          <span class="prop-feat">🚿 3 Baths</span>
+          <span class="prop-feat">📐 1,450 SqFt</span>
+        </div>
+        <div class="prop-price">PKR 1.65 Cr</div>
+        <div class="prop-price-label">Ground + 2 · Elevator Building</div>
+      </div>
+    </div>
+
+    <!-- Property 4 -->
+    <div class="prop-card reveal">
+      <div class="prop-image">
+        <div class="prop-image-bg"></div>
+        <div class="prop-badge badge-hot">Prime Location</div>
+        <div class="prop-image-icon">🏪</div>
+        <div class="prop-image-label">Commercial Shop</div>
+      </div>
+      <div class="prop-body">
+        <div class="prop-type">Commercial · For Sale</div>
+        <div class="prop-title">Ground Floor Commercial Shop</div>
+        <div class="prop-location">📍 Main Rashid Minhas Rd, Scheme 33</div>
+        <div class="prop-features">
+          <span class="prop-feat">📐 250 SqFt</span>
+          <span class="prop-feat">🚗 Parking</span>
+          <span class="prop-feat">📍 Corner Unit</span>
+        </div>
+        <div class="prop-price">PKR 95 Lakh</div>
+        <div class="prop-price-label">High Footfall · Ideal for Retail</div>
+      </div>
+    </div>
+
+    <!-- Property 5 -->
+    <div class="prop-card reveal reveal-delay-1">
+      <div class="prop-image">
+        <div class="prop-image-bg"></div>
+        <div class="prop-badge badge-sale">For Sale</div>
+        <div class="prop-image-icon">🏡</div>
+        <div class="prop-image-label">House</div>
+      </div>
+      <div class="prop-body">
+        <div class="prop-type">House · Double Storey</div>
+        <div class="prop-title">160 Sq Yd Double-Storey House</div>
+        <div class="prop-location">📍 Sector 33-B, Gulzar-e-Hijri, Karachi</div>
+        <div class="prop-features">
+          <span class="prop-feat">🛏 4 Beds</span>
+          <span class="prop-feat">🚿 4 Baths</span>
+          <span class="prop-feat">📐 160 Sq Yd</span>
+        </div>
+        <div class="prop-price">PKR 2.10 Cr</div>
+        <div class="prop-price-label">Newly Renovated · Ready to Move</div>
+      </div>
+    </div>
+
+    <!-- Property 6 -->
+    <div class="prop-card reveal reveal-delay-2">
+      <div class="prop-image">
+        <div class="prop-image-bg"></div>
+        <div class="prop-badge badge-new">Investment Pick</div>
+        <div class="prop-image-icon">🏞️</div>
+        <div class="prop-image-label">Commercial Plot</div>
+      </div>
+      <div class="prop-body">
+        <div class="prop-type">Plot · Commercial</div>
+        <div class="prop-title">200 Sq Yd Commercial Plot</div>
+        <div class="prop-location">📍 Main Boulevard, Scheme 33, Karachi</div>
+        <div class="prop-features">
+          <span class="prop-feat">📐 200 Sq Yd</span>
+          <span class="prop-feat">📄 Approved Plan</span>
+          <span class="prop-feat">📍 Corner Plot</span>
+        </div>
+        <div class="prop-price">PKR 2.80 Cr</div>
+        <div class="prop-price-label">High ROI · Development Ready</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+<section id="why">
+  <div class="why-bg"></div>
+  <div class="why-grid">
+    <div>
+      <div class="divider reveal">
+        <div class="divider-line"></div>
+        <span class="divider-text">Why Choose Us</span>
+      </div>
+      <h2 class="why-heading reveal reveal-delay-1">
+        The Standard You <em class="gold">Deserve</em>
+      </h2>
+      <p class="why-intro reveal reveal-delay-2">
+        In Karachi's fast-moving property market, your agent makes all the difference. We combine ground-level knowledge, legal diligence, and a genuine commitment to your success — making us the city's choice for secure real estate transactions.
+      </p>
+      <div style="margin-top:40px;" class="reveal reveal-delay-3">
+        <a href="#contact" class="btn btn-gold">Schedule a Free Consultation →</a>
+      </div>
+    </div>
+    <div class="why-features">
+      <div class="why-item reveal">
+        <div class="why-icon">🛡️</div>
+        <div>
+          <div class="why-item-title">Trust & Transparency</div>
+          <div class="why-item-desc">We share every detail — market value, legal status, and realistic timelines — so you make decisions with full clarity.</div>
+        </div>
+      </div>
+      <div class="why-item reveal reveal-delay-1">
+        <div class="why-icon">✅</div>
+        <div>
+          <div class="why-item-title">Verified Deals Only</div>
+          <div class="why-item-desc">Every listing undergoes thorough title verification and legal review before it reaches you. No surprises after the deal.</div>
+        </div>
+      </div>
+      <div class="why-item reveal reveal-delay-2">
+        <div class="why-icon">📍</div>
+        <div>
+          <div class="why-item-title">Deep Local Market Knowledge</div>
+          <div class="why-item-desc">With 12+ years in Scheme 33 and Gulzar-e-Hijri, we know the market's micro-trends better than anyone else in the area.</div>
+        </div>
+      </div>
+      <div class="why-item reveal reveal-delay-3">
+        <div class="why-icon">⚡</div>
+        <div>
+          <div class="why-item-title">Swift, Smooth Transactions</div>
+          <div class="why-item-desc">Our streamlined process and established network cut through delays, so you close the deal when the opportunity is right.</div>
+        </div>
+      </div>
+      <div class="why-item reveal reveal-delay-4">
+        <div class="why-icon">🫂</div>
+        <div>
+          <div class="why-item-title">Personalized Client Service</div>
+          <div class="why-item-desc">No cookie-cutter advice. We listen to your goals, budget, and priorities — then build a strategy specifically for you.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials">
+  <div class="divider reveal">
+    <div class="divider-line"></div>
+    <span class="divider-text">Client Voices</span>
+  </div>
+  <h2 class="section-heading reveal reveal-delay-1" style="margin-bottom:60px;">
+    What Our Clients <em class="gold">Say</em>
+  </h2>
+  <div class="testimonials-grid">
+    <div class="testi-card featured reveal">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">
+        I had been searching for a reliable agent in Scheme 33 for nearly a year. Every time I found a plot I liked, something would go wrong with the paperwork. When a friend referred me to Nadeem Siddiqui Real Estate, everything changed. They walked me through the entire process — from title verification to registry — and I never felt left in the dark. This is the kind of honest dealing I thought had disappeared from Karachi's market.
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar">FA</div>
+        <div>
+          <div class="testi-name">Fahad Azeem</div>
+          <div class="testi-detail">Purchased Residential Plot · Sector 33-A</div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="testi-card reveal reveal-delay-1">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">
+        We were relocating from Abu Dhabi and needed someone we could trust to handle the purchase remotely. Nadeem Sahib personally managed every step, sent us videos of the property, and kept us informed throughout. The bungalow was exactly as described — no surprises. Pure professionalism.
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar">SR</div>
+        <div>
+          <div class="testi-name">Sadia Raza</div>
+          <div class="testi-detail">Bungalow Purchase · Gulzar-e-Hijri</div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="testi-card reveal reveal-delay-2">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">
+        I came to them as a first-time investor with a modest budget and no idea where to start. They advised me on which areas were appreciating fastest, helped me avoid a problematic listing I was considering, and found me a commercial shop with solid rental yield. Three years later, my investment has grown 40%. I only trust this office.
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar">BK</div>
+        <div>
+          <div class="testi-name">Bilal Khalid</div>
+          <div class="testi-detail">Investment Client · Commercial Unit</div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+    </div>
+
+    <div class="testi-card reveal reveal-delay-3">
+      <div class="testi-quote">"</div>
+      <p class="testi-text">
+        Sold my apartment in Gulzar-e-Hijri within three weeks at a price I was genuinely happy with. The team was responsive, the documentation was handled efficiently, and at no point did I feel pressured. It felt like working with a trusted family friend, not just an agent.
+      </p>
+      <div class="testi-author">
+        <div class="testi-avatar">NH</div>
+        <div>
+          <div class="testi-name">Nadia Hussain</div>
+          <div class="testi-detail">Sold Apartment · Block 7</div>
+        </div>
+        <div class="testi-stars">★★★★★</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section id="cta-band">
+  <div class="cta-band-bg"></div>
+  <div class="cta-band-inner">
+    <div class="cta-eyebrow reveal">Limited Properties Available</div>
+    <h2 class="cta-heading reveal reveal-delay-1">
+      Ready to Invest in<br><em class="gold">Your Future?</em>
+    </h2>
+    <p class="cta-sub reveal reveal-delay-2">
+      Whether you are buying your first home, selling a property, or seeking smart investment opportunities in Karachi — our team is ready to guide you. The right deal is waiting.
+    </p>
+    <div class="cta-buttons reveal reveal-delay-3">
+      <a href="tel:+92300000000" class="btn btn-gold">
+        <span>📞</span> Call Now
+      </a>
+      <a href="https://wa.me/92300000000?text=Hello,%20I%20am%20interested%20in%20a%20property%20consultation." target="_blank" class="btn btn-outline">
+        <span>💬</span> WhatsApp Inquiry
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="divider reveal">
+    <div class="divider-line"></div>
+    <span class="divider-text">Get In Touch</span>
+  </div>
+  <h2 class="section-heading reveal reveal-delay-1" style="margin-bottom:16px;">
+    Let's Find Your <em class="gold">Perfect Property</em>
+  </h2>
+  <p style="color:var(--text-secondary);font-size:0.9rem;margin-bottom:0;" class="reveal reveal-delay-2">
+    Visit us in Scheme 33, call for a consultation, or fill out the form and we'll get back to you within 24 hours.
+  </p>
+  <div class="contact-grid">
+    <div class="contact-info">
+      <div class="contact-item reveal">
+        <div class="contact-item-icon">📍</div>
+        <div>
+          <div class="contact-item-label">Office Address</div>
+          <div class="contact-item-value">Scheme 33, Gulzar-e-Hijri<br>Karachi, Sindh, Pakistan</div>
+        </div>
+      </div>
+      <div class="contact-item reveal reveal-delay-1">
+        <div class="contact-item-icon">📞</div>
+        <div>
+          <div class="contact-item-label">Phone</div>
+          <div class="contact-item-value">
+            <a href="tel:+92300000000" style="color:var(--text-secondary);text-decoration:none;">+92 300 000 0000</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-item reveal reveal-delay-2">
+        <div class="contact-item-icon">💬</div>
+        <div>
+          <div class="contact-item-label">WhatsApp</div>
+          <div class="contact-item-value">
+            <a href="https://wa.me/92300000000" target="_blank" style="color:var(--gold);text-decoration:none;">Message Us on WhatsApp →</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-item reveal reveal-delay-3">
+        <div class="contact-item-icon">⏰</div>
+        <div>
+          <div class="contact-item-label">Office Hours</div>
+          <div class="contact-item-value">Monday – Saturday<br>10:00 AM – 7:00 PM (PKT)</div>
+        </div>
+      </div>
+      <div class="map-placeholder reveal reveal-delay-4">
+        <div class="map-icon">🗺️</div>
+        <div class="map-text">Google Maps · Scheme 33, Gulzar-e-Hijri</div>
+        <a href="https://maps.google.com/?q=Gulzar-e-Hijri,Scheme+33,Karachi" target="_blank" style="font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);text-decoration:none;margin-top:4px;">Open in Google Maps →</a>
+      </div>
+    </div>
+    <div class="contact-form reveal reveal-delay-2">
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Full Name</label>
+          <input type="text" class="form-input" placeholder="Your name">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Phone / WhatsApp</label>
+          <input type="tel" class="form-input" placeholder="+92 3XX XXX XXXX">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">I Am Interested In</label>
+        <select class="form-select">
+          <option value="">Select Property Type</option>
+          <option>Buying a Plot</option>
+          <option>Buying a Bungalow / House</option>
+          <option>Buying an Apartment / Flat</option>
+          <option>Buying a Commercial Shop</option>
+          <option>Selling My Property</option>
+          <option>Investment Consulting</option>
+        </select>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label class="form-label">Preferred Location</label>
+          <input type="text" class="form-input" placeholder="Scheme 33, Gulzar-e-Hijri...">
+        </div>
+        <div class="form-group">
+          <label class="form-label">Budget (PKR)</label>
+          <input type="text" class="form-input" placeholder="e.g. 1 Crore">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Message</label>
+        <textarea class="form-textarea" placeholder="Tell us more about what you're looking for..."></textarea>
+      </div>
+      <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;" onclick="alert('Thank you! We will contact you within 24 hours.')">
+        Send Inquiry →
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div class="footer-brand">
+      <div class="footer-logo">Nadeem <span>Siddiqui</span></div>
+      <div class="footer-logo-sub">Real Estate · Est. 2012</div>
+      <p class="footer-tagline">"Your Trusted Property Partner<br>in Karachi"</p>
+      <div class="footer-social">
+        <a href="#" class="social-icon" title="Facebook">f</a>
+        <a href="#" class="social-icon" title="Instagram">ig</a>
+        <a href="#" class="social-icon" title="YouTube">yt</a>
+        <a href="https://wa.me/92300000000" class="social-icon" title="WhatsApp">wa</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Quick Links</div>
+      <ul class="footer-links">
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#services">Our Services</a></li>
+        <li><a href="#properties">Featured Properties</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Services</div>
+      <ul class="footer-links">
+        <li><a href="#services">Plot Buying & Selling</a></li>
+        <li><a href="#services">Bungalows & Houses</a></li>
+        <li><a href="#services">Flats & Apartments</a></li>
+        <li><a href="#services">Commercial Shops</a></li>
+        <li><a href="#services">Investment Consulting</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Contact</div>
+      <ul class="footer-links">
+        <li><a href="#">Scheme 33, Gulzar-e-Hijri</a></li>
+        <li><a href="tel:+92300000000">+92 300 000 0000</a></li>
+        <li><a href="https://wa.me/92300000000">WhatsApp Us</a></li>
+        <li><a href="mailto:info@nadeemrealestate.pk">info@nadeemrealestate.pk</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Nadeem Siddiqui Real Estate · Karachi, Pakistan. All Rights Reserved.</div>
+    <div class="footer-rera">Serving Karachi with Integrity Since 2012</div>
+  </div>
+</footer>
+
+<!-- FLOATING WHATSAPP -->
+<div class="wa-float">
+  <span class="wa-label">Chat on WhatsApp</span>
+  <a href="https://wa.me/92300000000?text=Hello,%20I%20need%20property%20consultation%20in%20Karachi." target="_blank" class="wa-btn" title="WhatsApp">
+    💬
+  </a>
+</div>
+
+<script>
+  // CURSOR
+  const cursor = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  function animateCursor() {
+    cursor.style.left = mx + 'px';
+    cursor.style.top = my + 'px';
+    rx += (mx - rx) * 0.15;
+    ry += (my - ry) * 0.15;
+    ring.style.left = rx + 'px';
+    ring.style.top = ry + 'px';
+    requestAnimationFrame(animateCursor);
+  }
+  animateCursor();
+  document.querySelectorAll('a, button, .service-card, .prop-card, .why-item, .testi-card').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      cursor.style.transform = 'translate(-50%,-50%) scale(2)';
+      ring.style.transform = 'translate(-50%,-50%) scale(1.5)';
+      ring.style.borderColor = 'rgba(201,168,76,0.8)';
+    });
+    el.addEventListener('mouseleave', () => {
+      cursor.style.transform = 'translate(-50%,-50%) scale(1)';
+      ring.style.transform = 'translate(-50%,-50%) scale(1)';
+      ring.style.borderColor = 'rgba(201,168,76,0.5)';
+    });
+  });
+
+  // NAVBAR SCROLL
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // MOBILE MENU
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.add('open');
+  });
+  document.getElementById('mobileClose').addEventListener('click', closeMobile);
+  function closeMobile() {
+    document.getElementById('mobileMenu').classList.remove('open');
+  }
+
+  // REVEAL ON SCROLL
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+  reveals.forEach(el => observer.observe(el));
+
+  // COUNTER ANIMATION
+  function animateCount(el, target, suffix = '') {
+    let current = 0;
+    const duration = 2000;
+    const step = target / (duration / 16);
+    const timer = setInterval(() => {
+      current = Math.min(current + step, target);
+      el.textContent = (suffix === '%' ? Math.floor(current) : Math.floor(current)) + suffix;
+      if (current >= target) clearInterval(timer);
+    }, 16);
+  }
+  const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const nums = entry.target.querySelectorAll('.hero-stat-num');
+        const targets = [500, 12, 98, 0];
+        const suffixes = ['+', '+', '%', ''];
+        const labels = ['PKR 0', '', '', ''];
+        nums.forEach((el, i) => {
+          if (i === 3) { el.textContent = '₨ 0'; return; }
+          animateCount(el, targets[i], suffixes[i]);
+        });
+        statsObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  const heroStats = document.querySelector('.hero-stats');
+  if (heroStats) statsObserver.observe(heroStats);
+</script>
+</body>
+</html>
